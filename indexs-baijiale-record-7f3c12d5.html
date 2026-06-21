@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百家乐 · 日常索引指南</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f9f9f9;
+            color: #1e1e2a;
+            line-height: 1.7;
+            padding: 2rem 1.25rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 720px;
+            width: 100%;
+            margin: 0 auto;
+            background: white;
+            padding: 2.5rem 2.2rem 3rem;
+            border-radius: 28px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.03), 0 1px 4px rgba(0,0,0,0.02);
+        }
+
+        /* 顶部导航 —— 极简留白 */
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 1.8rem 2.5rem;
+            padding-bottom: 1.2rem;
+            margin-bottom: 2.8rem;
+            border-bottom: 1px solid #ececf0;
+        }
+
+        .nav a {
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 450;
+            color: #35354b;
+            letter-spacing: 0.02em;
+            transition: color 0.2s;
+        }
+
+        .nav a:hover {
+            color: #a57c5b;
+        }
+
+        .nav .active {
+            color: #7f5f45;
+            border-bottom: 2px solid #b59576;
+            padding-bottom: 0.25rem;
+        }
+
+        /* hero 区域 */
+        .hero {
+            margin-bottom: 2.8rem;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            font-weight: 550;
+            letter-spacing: -0.01em;
+            color: #222;
+            margin-bottom: 0.4rem;
+        }
+
+        .hero .sub {
+            font-size: 1rem;
+            color: #4f4f63;
+            max-width: 32em;
+            margin-top: 0.2rem;
+        }
+
+        /* 标题层级 */
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 520;
+            margin: 2.2rem 0 0.5rem 0;
+            color: #1e1e2a;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin: 1.6rem 0 0.3rem 0;
+            color: #2e2e3f;
+        }
+
+        p {
+            margin: 0.5rem 0 1.2rem 0;
+            color: #3a3a4e;
+        }
+
+        .intro-text {
+            margin-bottom: 2rem;
+        }
+
+        /* 场景卡片 —— 留白 & 柔和边框 */
+        .scene-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+            margin: 1.8rem 0 2rem;
+        }
+
+        .scene-card {
+            background: #f7f6f9;
+            border-radius: 20px;
+            padding: 1.4rem 1.6rem 1.6rem;
+            border: 1px solid #e8e7ed;
+            transition: box-shadow 0.15s;
+        }
+
+        .scene-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+
+        .scene-card h3 {
+            margin-top: 0;
+            font-weight: 520;
+            font-size: 1.1rem;
+            color: #1f1f30;
+        }
+
+        .scene-card p {
+            margin-bottom: 0.3rem;
+            font-size: 0.98rem;
+        }
+
+        .scene-card .tag {
+            display: inline-block;
+            background: #e3dfd9;
+            color: #2f2f3f;
+            font-size: 0.75rem;
+            font-weight: 470;
+            padding: 0.2rem 0.7rem;
+            border-radius: 30px;
+            margin-top: 0.6rem;
+            letter-spacing: 0.02em;
+        }
+
+        /* 常见说明 (faq 摘要风格) */
+        .faq-item {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eeeef2;
+        }
+
+        .faq-item:last-of-type {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 500;
+            margin-bottom: 0.15rem;
+            color: #1e1e2a;
+        }
+
+        .faq-a {
+            color: #4b4b60;
+            font-size: 0.95rem;
+            margin-top: 0.1rem;
+        }
+
+        /* 内联链接样式 */
+        a {
+            color: #7f5f45;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s;
+        }
+
+        a:hover {
+            border-bottom-color: #b59576;
+        }
+
+        .inline-link {
+            color: #7f5f45;
+            font-weight: 470;
+        }
+
+        /* 响应式 */
+        @media (max-width: 520px) {
+            .page {
+                padding: 1.8rem 1.2rem;
+                border-radius: 18px;
+            }
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            .nav {
+                gap: 1rem 1.5rem;
+            }
+            .scene-card {
+                padding: 1.2rem;
+            }
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #e4e3ea;
+            margin: 2rem 0 1.5rem;
+        }
+
+        .footnote {
+            font-size: 0.85rem;
+            color: #6e6e82;
+            margin-top: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- 顶部导航 -->
+    <nav class="nav">
+        <a href="#" class="active">日常</a>
+        <a href="#">对照</a>
+        <a href="#">延伸</a>
+        <a href="#">笔记</a>
+    </nav>
+
+    <!-- hero 区域 -->
+    <div class="hero">
+        <h1>百家乐 · 日常索引</h1>
+        <div class="sub">一份轻量的查询、对照与延伸阅读页，围绕<a href="https://indexs-baijiale.com" class="inline-link">百家乐</a>整理常见场景与说明。</div>
+    </div>
+
+    <!-- 核心介绍段落 -->
+    <div class="intro-text">
+        <p>无论你是初次接触还是希望系统回顾，从基础名词到常见模式，这里提供一种温和的整理方式。页面围绕日常可能遇到的几个场景展开，不堆砌术语，只做清晰对照。</p>
+        <p>下面三个模块分别对应查询、对比和延伸阅读——你可以按需翻阅，也可以随意停留在感兴趣的地方。</p>
+    </div>
+
+    <!-- 三个场景模块 -->
+    <h2>三个常见场景</h2>
+    <div class="scene-grid">
+        <div class="scene-card">
+            <h3>📋 快速查询 · 基础词汇</h3>
+            <p>闲、庄、和、例牌、补牌规则…… 在桌面或移动端随时核对。适合在阅读文章或对局时保持参照。</p>
+            <p>每个条目都附简短说明，避免过度解读。</p>
+            <span class="tag">对照表</span>
+        </div>
+        <div class="scene-card">
+            <h3>🔁 模式对照 · 常见排列</h3>
+            <p>长龙、单跳、双跳、房厅…… 一些经常被提及的出牌形态。这里只做客观描述，不涉及任何预测或策略。</p>
+            <p>你可以将实际轨迹与这些模式进行比对，方便理解讨论语境。</p>
+            <span class="tag">形态参考</span>
+        </div>
+        <div class="scene-card">
+            <h3>📖 延伸阅读 · 背景与观念</h3>
+            <p>从历史沿革到概率基础，再到不同地区的玩法差异。这部分内容偏向观念梳理，帮助你建立更完整的认知框架。</p>
+            <p>延伸内容持续更新，部分文章链接指向 <a href="https://indexs-baijiale.com">百家乐</a> 站点内的专题。</p>
+            <span class="tag">深度浏览</span>
+        </div>
+    </div>
+
+    <!-- 常见说明（FAQ 摘要） -->
+    <h2>常见说明</h2>
+    <div class="faq-item">
+        <div class="faq-q">❓ “百家乐” 和 “Baccarat” 是完全等同的吗？</div>
+        <div class="faq-a">在中文语境下通常指同一套规则，但不同地区（澳门、菲律宾、欧洲等）可能在补牌细节或抽水比例上略有不同。具体可参考站点内的对照说明。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q">❓ 为什么我看到的术语有时不一样？</div>
+        <div class="faq-a">部分称呼源自不同语言或习惯，例如“闲家/Player”“庄家/Banker”。本站尽量使用中文通用说法，同时保留英文对照。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q">❓ 这里会提供技巧或必胜方法吗？</div>
+        <div class="faq-a">不会。所有内容仅限规则介绍、背景梳理与模式对照。任何声称“必胜”“稳赢”的表述都与本站立场无关，请理性甄别。</div>
+    </div>
+
+    <hr>
+
+    <p style="margin-bottom: 0.2rem;">如果你希望深入了解更完整的规则、历史或常见问题，可以访问 <a href="https://indexs-baijiale.com">百家乐</a> 的索引页面。那里整理了更细致的模块和外部参考。</p>
+
+    <div class="footnote">
+        — 页面内容仅作信息整理，不构成任何建议。请保持独立思考。
+    </div>
+</div>
+</body>
+</html>
