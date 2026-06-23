@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>乐鱼 · 稳定入口与页面说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f4f6fa;
+      color: #1e242b;
+      line-height: 1.6;
+    }
+    /* 深色头图 */
+    .hero {
+      background: linear-gradient(135deg, #0b1a2e 0%, #1c2e44 100%);
+      padding: 4rem 2rem 3.5rem;
+      text-align: center;
+      color: #e8edf3;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .hero h1 {
+      font-size: 2.75rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-bottom: 0.75rem;
+      color: #ffffff;
+    }
+    .hero .tagline {
+      font-size: 1.25rem;
+      font-weight: 300;
+      color: #b6c8db;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+    /* 浅色正文区 */
+    .content-wrapper {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem 4rem;
+    }
+    .intro-block {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 2rem 2.25rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+      margin-bottom: 2rem;
+    }
+    .intro-block p {
+      margin-bottom: 1.25rem;
+      font-size: 1.05rem;
+    }
+    .intro-block p:last-child {
+      margin-bottom: 0;
+    }
+    .highlight-link {
+      color: #2266cc;
+      text-decoration: none;
+      border-bottom: 1px dotted #9bb9e6;
+      transition: color 0.2s, border-color 0.2s;
+      font-weight: 500;
+    }
+    .highlight-link:hover {
+      color: #0f4b9e;
+      border-bottom-color: #0f4b9e;
+    }
+    /* 特点卡片列表 */
+    .features-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.25rem;
+      margin: 2rem 0;
+    }
+    .feature-card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 1.5rem 1.25rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+      transition: transform 0.15s, box-shadow 0.2s;
+      border-left: 4px solid #2266cc;
+    }
+    .feature-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    }
+    .feature-card h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: #0b1a2e;
+    }
+    .feature-card p {
+      font-size: 0.95rem;
+      color: #3b4755;
+      margin: 0;
+    }
+    .section-heading {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin: 2rem 0 0.75rem;
+      color: #0b1a2e;
+      border-bottom: 2px solid #dce3ec;
+      padding-bottom: 0.3rem;
+    }
+    .desc-text {
+      font-size: 1.02rem;
+      margin: 1rem 0 1.5rem;
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+    .desc-text p {
+      margin-bottom: 0.75rem;
+    }
+    .faq-mini {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 1.5rem 2rem;
+      margin: 2rem 0 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+    .faq-mini h4 {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      color: #1e2a36;
+    }
+    .faq-mini p {
+      color: #3e4b5a;
+      font-size: 0.98rem;
+    }
+    .closing-note {
+      margin-top: 2.5rem;
+      padding: 1.5rem 2rem;
+      background: #eef2f7;
+      border-radius: 18px;
+      font-size: 1rem;
+      color: #1f2b38;
+      border: 1px solid #d7dfe9;
+    }
+    .closing-note a {
+      color: #2266cc;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .closing-note a:hover {
+      color: #0f4b9e;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #dce3ec;
+      margin: 1.5rem 0;
+    }
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 2rem; }
+      .hero .tagline { font-size: 1rem; }
+      .content-wrapper { padding: 1.5rem 1rem 3rem; }
+      .intro-block { padding: 1.5rem; }
+      .feature-card { padding: 1.2rem; }
+      .desc-text { padding: 1.2rem; }
+      .faq-mini { padding: 1.2rem; }
+      .closing-note { padding: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <h1>乐鱼</h1>
+    <div class="tagline">一个稳定的页面入口 · 提供清晰的功能说明</div>
+  </header>
+
+  <main class="content-wrapper">
+
+    <!-- 开场短句 + 承接段落 -->
+    <div class="intro-block">
+      <p>
+        无论你从哪里来，找到一个可靠且信息完整的起点总是第一步。  
+        这个页面所介绍的，正是这样一个地方——<strong>乐鱼</strong>，一个围绕基础服务与页面引导而设计的线上位置。
+      </p>
+      <p>
+        从最初的访问到日常的使用，页面的布局、提示和跳转逻辑都经过整理。  
+        下面你会看到它所包含的几个主要方面，以及一些简单的说明，方便你快速了解它的构成。
+      </p>
+    </div>
+
+    <!-- 特点列表：从稳定入口和页面说明角度 -->
+    <h2 class="section-heading">特点与定位</h2>
+    <div class="features-list">
+      <div class="feature-card">
+        <h3>固定入口</h3>
+        <p>页面地址保持稳定，减少路径变更带来的困扰。你可以将这里作为常用的访问起点。</p>
+      </div>
+      <div class="feature-card">
+        <h3>简洁页面结构</h3>
+        <p>导航、内容与功能提示分区清晰，每个区块都包含必要的文字说明，不堆砌无关元素。</p>
+      </div>
+      <div class="feature-card">
+        <h3>功能区域标注</h3>
+        <p>页面上关键操作区域都有对应的文字提示，帮助第一次使用的浏览者理解每个部分的用途。</p>
+      </div>
+      <div class="feature-card">
+        <h3>持续维护</h3>
+        <p>页面内容会按照实际使用反馈进行小幅更新，保持说明与现状一致。</p>
+      </div>
+    </div>
+
+    <!-- 场景与提示——用平实语气写一段承接 -->
+    <div class="desc-text">
+      <p>
+        无论你是在寻找服务入口、查看相关说明，还是仅仅想确认当前页面的用途，<a href="https://mainmobile-leyu.com" class="highlight-link">乐鱼</a> 都提供了一个经过整理的静态介绍。  
+        页面不含自动跳转或强制弹窗，所有链接均为主动触发。你可以根据自己的节奏浏览，也可以随时将页面加入书签。
+      </p>
+      <p style="margin-bottom: 0;">
+        在日常使用中，我们建议先花一两分钟浏览下方的 FAQ 摘要和结尾提示，它们覆盖了一些常见的疑问和注意事项。
+      </p>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <h2 class="section-heading">常见疑问摘要</h2>
+    <div class="faq-mini">
+      <h4>这个页面是做什么的？</h4>
+      <p>它是一个介绍性的页面，主要说明 <a href="https://mainmobile-leyu.com" style="color:#2266cc; text-decoration:underline; text-underline-offset:2px;">乐鱼</a> 的基本定位、特点以及页面结构，不包含任何后台功能或用户登录入口。</p>
+    </div>
+    <div class="faq-mini">
+      <h4>链接会跳转到哪里？</h4>
+      <p>页面中指向「乐鱼」的链接均前往同一站点，该站点提供更详细的功能页面与操作指引。所有链接均标有下划线或点线样式，可放心识别。</p>
+    </div>
+    <div class="faq-mini">
+      <h4>页面会频繁变动吗？</h4>
+      <p>不会。本页面以稳定为优先，仅在需要调整说明内容或修复展示问题时才进行更新。每次更新都会保留核心结构和链接。</p>
+    </div>
+
+    <!-- 温和结尾 -->
+    <div class="closing-note">
+      <p>
+        感谢你花时间阅读这份介绍。无论你是首次接触，还是需要重新确认相关信息，希望这个页面能为你提供一份清晰、可靠的参考。  
+        如果需要进一步了解，可以随时访问 <a href="https://mainmobile-leyu.com">乐鱼</a> 查看更多内容。
+      </p>
+      <p style="margin-top: 0.8rem; font-size: 0.93rem; color: #4b5b6e;">
+        保持简单，持续可用。
+      </p>
+    </div>
+
+    <hr>
+    <p style="font-size: 0.85rem; text-align: center; color: #7c8a9b;">—— 页面说明 · 版本 2025 · 内容定期复核 ——</p>
+
+  </main>
+
+</body>
+</html>
